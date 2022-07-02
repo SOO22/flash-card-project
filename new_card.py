@@ -21,12 +21,10 @@ class NewCard:
         canvas.itemconfig(card_image, image=card_front)
         flip_timer = window.after(3000, func=flip_card)
 
-
     def flip_card(self):
         canvas.itemconfig(card_word, text=current_card["English"], fill="white")
         canvas.itemconfig(card_title, text="English", fill="white")
         canvas.itemconfig(card_image, image=card_back)
-
 
     def remove_card(self):
         learning.remove(current_card)
